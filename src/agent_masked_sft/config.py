@@ -1,4 +1,5 @@
 import torch
+from pathlib import Path
 
 SEED = 0
 N_DIALOGUES = 6
@@ -10,6 +11,12 @@ NUM_EPOCHS = 1
 LEARNING_RATE = 2e-5
 LOG_EVERY = 1
 GRAD_CLIP_NORM = 1.0
+
+
+OUTPUTDIR = Path("outputs")
+STANDARD_MODEL_DIR = OUTPUTDIR / "model_standard"
+INTERVENTIONAL_MODEL_DIR = OUTPUTDIR / "model_interventional"
+TRUTH_PREFERENCE_FIG_PATH = OUTPUTDIR / "truth_preference_deltas.png"
 
 
 MODEL_NAME = "Qwen/Qwen2.5-0.5B"

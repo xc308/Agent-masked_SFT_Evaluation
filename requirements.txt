@@ -1,3 +1,6 @@
 torch
 transformers
 accelerate
+
+numpy
+matplotlib
