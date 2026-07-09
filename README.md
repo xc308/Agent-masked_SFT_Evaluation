@@ -166,7 +166,7 @@ One run produced:
 
 ```text
 Standard SFT prefers true completion for 24 / 33 facts.
-Agent-masked SFT prefers true completion for 30 / 33 facts.
+Agent-masked (IV) SFT prefers true completion for 30 / 33 facts.
 ```
 
 
