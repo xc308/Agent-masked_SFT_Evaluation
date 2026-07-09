@@ -29,13 +29,15 @@ Agent-masked_SFT_Evaluation/
 │       ├── train.py                  # train the base model using batches of dataset from dataloader
 │       ├── evaluation.py             # agent free-followup generation, log probability score
 │       └── visualization.py          # visualise the truth preference of two SF model
-├── scripts/
+|
+|── scripts/
 │   ├── check_setup.py                
 │   ├── check_dialogue_data.py
 │   ├── check_tokenization.py
 │   ├── check_dataset_dataloader.py
 │   ├── run_train.py
 │   └── run_evaluation.py
+|
 ├── requirements.txt
 ├── pyproject.toml
 ├── .gitignore
@@ -64,10 +66,10 @@ Install the local package in editable mode:
 python3 -m pip install -e .
 ```
 
-Optional: set a Hugging Face token to avoid unauthenticated download warnings and improve rate limits:
+Optional: set a Hugging Face token to avoid warnings. In terminal, 
 
 ```bash
-export HF_TOKEN="your_huggingface_token_here"
+export HF_TOKEN="your_huggingface_token"
 ```
 
 ## Model
@@ -124,12 +126,8 @@ This trains two models:
 1. A standard SFT model
 2. An agent-masked SFT model
 
-The trained models are saved to:
+The trained models are saved to outputs. Not uploaded here due to the size.
 
-```text
-outputs/model_standard/
-outputs/model_interventional/
-```
 
 
 ## Evaluation
@@ -172,5 +170,5 @@ Agent-masked SFT prefers true completion for 30 / 33 facts.
 ```
 
 
-```markdown
-![Truth preference deltas](Figures/Fig_preference_for_truth.png)
+
+![Fig_preference_for_truth](Figures/Fig_preference_for_truth.png)
